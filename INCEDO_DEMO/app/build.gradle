@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.poc.incedo.incedo_demo"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        resValue "string", "getmovielist_url", "https://preprod.snagfilms.com/apis/viewlift/featured.json?content_id=00000152-7fb6-d98a-ad53-fffeff3a0000&site=monumental-network&device=android&access_key=NTMUBHGZLWBVZXSGXQJL&timestamp=2017-06-01T21:30:26Z&signature=j8R3eGdUsuyaoQ3ZoA8CycL08zM="
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.1'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+
+
+}
